@@ -1,0 +1,34 @@
+// 2665. Counter II
+var createCounter = function(init) {
+    var n=init;
+    var obj={
+        increment(){
+            return init=init+1;
+        },
+        decrement(){
+            return init= init-1;
+        },
+        reset(){
+            return init=n
+        }
+    }
+    return obj;
+};
+
+// other method
+
+var createCounter = function (init) {
+        var n = init;
+        function increment() {
+            return init = init + 1;
+        }
+        function decrement() {
+            return init = init - 1;
+        }
+        function reset() {
+            return init = n
+        }
+        return {
+            increment, decrement, reset
+        }
+    };
